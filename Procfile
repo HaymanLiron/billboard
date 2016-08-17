@@ -1,1 +1,1 @@
-web: gunicorn billboard.wsgi
+web: gunicorn {{project_name}}.wsgi
