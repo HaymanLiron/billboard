@@ -1,4 +1,131 @@
-.julian{
-    color:red;
-    background: black;
+/*font downloads*/
+@import url(https://fonts.googleapis.com/css?family=Pinyon+Script);
+@import url(https://fonts.googleapis.com/css?family=Anton);
+@import url(https://fonts.googleapis.com/css?family=Poiret+One);
+
+.max-width-container{
+    max-width: 800px;
+}
+
+.title{
+    font-family:"Anton",sans-serif;
+    color:black;
+    font-size:40px;
+}
+
+.no-messages-text{
+    font-family:Arial,sans-serif;
+    font-size:24px;
+    color:black;
+}
+
+.message-box{
+    max-width: 800px;
+    height:auto;
+    border:3px solid #00B7EF;
+}
+.message-date{
+    font-family: "Poiret One",sans-serif;
+    font-size: 16px;
+    color:black;
+}
+
+.message-title{
+    font-family:"Anton",sans-serif;
+    color:#00B7EF;
+    font-size:30px;
+}
+
+.message-text{
+    font-family:Arial,sans-serif;
+    font-size:16px;
+    color:#C1BFC0;
+}
+
+.message-signature{
+    font-family:"Pinyon Script",sans-serif;
+    font-size:24px;
+    color:black;
+}
+
+.plus-button-container{
+    border:1px black dashed;
+    max-width: 800px;
+}
+
+#plus{
+    font-size:16px ;
+    background-color:#66CDAA;
+    color:white;
+    border-radius:3px;
+}
+
+.new-message-box{
+    max-width: 800px;
+    height:auto;
+    border:3px dashed #00B7EF;
+}
+
+.new-message-title{
+    color:#C1BFC0;
+}
+
+.new-message-text{
+    height: 100px;
+    width: 90%;
+}
+
+.new-message-author{
+    /*position bottom right*/
+}
+
+.confirm-new-message-submission-container{
+    position: absolute;
+    border: 1px black dashed;
+    max-width: 800px;
+}
+
+.delete-new-message{
+    font-size: 16px;
+    color: white;
+    background-color: red;
+}
+
+.confirm-new-message{
+    font-size:16px ;
+    background-color:#66CDAA;
+    color:white;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+.centered {
+    text-align: center;
+}
+
+.relative{
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.vert-align-center-div {
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+}
+
+.horiz-align-center-div {
+    position: absolute;
+    left:50%;
+    transform: translateX(-50%);
+}
+
+.horiz-and-vert-align-center-div {
+    position: absolute;
+    left:50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
 }

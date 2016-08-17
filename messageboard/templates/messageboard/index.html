@@ -1,7 +1,43 @@
 {% load static %}
 <link rel="stylesheet" type="text/css" href="{% static 'messageboard/billboard.css' %}"/>
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+<body class="relative centered">
+<div class="max-width-container horiz-align-center-div">
+    <h1 class="title centered">Billboard</h1>
 
-<p class="julian">Hello, world!</p>
+    <div class="no-messages-text centered">No messages... <br>
+        Click the '+' button to add a new message
+    </div>
+    <div class="plus-button-container centered horiz-align-center-div">
+        <button id="plus" class="clickable centered"><i class="fa fa-plus" aria-hidden="true"></i></button>
+    </div>
+</div>
 
 
+<div class="message-box centered horiz-align-center-div">
+    <div class="message-date"></div>
+    <div class="message-title"></div>
+    <div class="message-text centered"></div>
+    <div class="message-signature"></div>
+</div>
+
+
+<div class="new-message-container centered horiz-align-center-div" style="display: none">
+    <div class="new-message-box">
+        <form action="{% url 'messageboard:submit-message' message.id %}" method="post">
+            <div class="message-date"></div>
+            <input type="text" name="title" class="new-message-title" placeholder="Title">
+            <input type="text" name="text" class="new-message-text centered" placeholder="Your message here">
+            <input type="text" name="author" class="new-message-author" placeholder="Author">
+            <div class="confirm-new-message-submission-container centered">
+                <button class="delete-new-message clickable"><i class="fa fa-times" aria-hidden="true"></i></button>
+                <button type="submit" class="confirm-new-message clickable"><i class="fa fa-check" aria-hidden="true"></i></button>
+            </div>
+        </form>
+    </div>
+
+
+</div>
+</body>
