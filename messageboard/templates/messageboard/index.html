@@ -3,41 +3,53 @@
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css"
       href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+
+
+<script   src="https://code.jquery.com/jquery-2.2.4.js"   integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="   crossorigin="anonymous"></script>
+<script type="text/javascript" src="{% static 'messageboard/js/billboard.js' %}"></script>
+
+
 <body class="relative centered">
+
 <div class="max-width-container horiz-align-center-div">
-    <h1 class="title centered">Billboard</h1>
-    <div class="message-box centered horiz-align-center-div">
-        <div class="message-date"></div>
-        <div class="message-title"></div>
-        <div class="message-text centered"></div>
-        <div class="message-signature"></div>
+    <h1 class="title centered row">Billboard</h1>
+    {% for message in message_list %}
+    <div class="row message-box centered">
+        <div class="message-date">{{ message.pub_date }}</div>
+        <div class="message-title">{{ message.title }}</div>
+        <div class="message-text">{{ message.text }}</div>
+        <div class="message-signature">{{ message.user_name }}</div>
+
     </div>
-    <div class="no-messages-text centered">No messages... <br>
+    {% empty %}
+    <div class=" row no-messages-text centered">No messages... <br>
         Click the '+' button to add a new message
     </div>
-    <div class="plus-button-container centered horiz-align-center-div">
+    {% endfor %}
+    <div class="row plus-button-container centered">
         <button id="plus" class="clickable centered"><i class="fa fa-plus" aria-hidden="true"></i></button>
     </div>
 </div>
 
-
-<div class="new-message-container centered" >
-    <div class="new-message-box">
-        <form action="{% url 'submit-message' %}" method="post" >
+<div class="new-message-container horiz-align-center-div">
+    <form action="{% url 'submit-message' %}" method="post">
+        <div class="new-message-box row">
             {% csrf_token %}
-            <div class="message-date"></div>
+            <div id="newDate" class="message-date">21/3/2012</div>
             <input type="text" name="title" class="new-message-title" placeholder="Title">
-            <input type="text" name="text" class="new-message-text centered" placeholder="Your message here">
-            <input type="text" name="author" class="new-message-author" placeholder="Author">
-            <div class="confirm-new-message-submission-container centered">
-                <button class="delete-new-message clickable"><i class="fa fa-times" aria-hidden="true"></i></button>
-                <button type="submit" class="confirm-new-message clickable"><i class="fa fa-check"
-                                                                               aria-hidden="true"></i></button>
+            <textarea col="100" row="4" name="text" class="new-message-text" placeholder="Your message here"></textarea>
+            <div style="text-align: right">
+            <input type="text" name="author" class="new-message-author" placeholder="Author" style="display: inline-block">
             </div>
-        </form>
-    </div>
+
+        </div>
+        <div class="confirm-new-message-submission-container row">
+            <button type="button" class="delete-new-message clickable"><i class="fa fa-times" aria-hidden="true"></i></button>
+            <button type="submit" class="confirm-new-message clickable"><i class="fa fa-check"
+                                                                           aria-hidden="true"></i></button>
+        </div>
+    </form>
+
 </div>
 
-
-</div>
 </body>

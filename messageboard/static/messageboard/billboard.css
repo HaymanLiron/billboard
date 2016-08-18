@@ -3,98 +3,159 @@
 @import url(https://fonts.googleapis.com/css?family=Anton);
 @import url(https://fonts.googleapis.com/css?family=Poiret+One);
 
-.max-width-container{
+.plus-button-container {
+    border: 1px black dashed;
     max-width: 800px;
+    height: 30px;
+    margin-top: 5%;
+
 }
 
-.title{
-    font-family:"Anton",sans-serif;
-    color:black;
-    font-size:40px;
-}
-
-.no-messages-text{
-    font-family:Arial,sans-serif;
-    font-size:24px;
-    color:black;
-}
-
-.message-box{
+.new-message-box {
     max-width: 800px;
-    height:auto;
-    border:3px solid #00B7EF;
+
 }
-.message-date{
-    font-family: "Poiret One",sans-serif;
+
+.new-message-container {
+    max-width: 800px;
+
+}
+
+.max-width-container {
+    max-width: 800px;
+
+}
+
+.title {
+    font-family: "Anton", sans-serif;
+    color: black;
+    font-size: 40px;
+}
+
+.no-messages-text {
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    color: black;
+}
+
+.message-box {
+    max-width: 800px;
+    height: auto;
+    border: 3px solid #00B7EF;
+    min-height: 100px;
+    margin-bottom: 4%;
+}
+
+.message-date {
+    font-family: "Poiret One", sans-serif;
     font-size: 16px;
-    color:black;
+    color: black;
+    float: left;
+    position: relative;
+    margin-top: -2%;
+    margin-left: 2%;
+    background-color: white;
+    padding-left: 1%;
+    padding-right: 1%;
 }
 
-.message-title{
-    font-family:"Anton",sans-serif;
-    color:#00B7EF;
-    font-size:30px;
+.message-title {
+    font-family: "Anton", sans-serif;
+    color: #00B7EF;
+    font-size: 30px;
+    /* float: left; */
+    text-align: left;
+    margin-left: 2%;
+    margin-top: 1%;
 }
 
-.message-text{
-    font-family:Arial,sans-serif;
-    font-size:16px;
-    color:#C1BFC0;
+.message-text {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    float: left;
+    color: #C1BFC0;
+    margin-left: 2%;
+    text-align: left;
 }
 
-.message-signature{
-    font-family:"Pinyon Script",sans-serif;
-    font-size:24px;
-    color:black;
+.message-signature {
+    font-family: "Pinyon Script", sans-serif;
+    font-size: 24px;
+    color: black;
+    text-align: right;
+    margin-right: 2%;
 }
 
-.plus-button-container{
-    border:1px black dashed;
-    max-width: 800px;
-}
-
-#plus{
-    font-size:16px ;
-    background-color:#66CDAA;
-    color:white;
-    border-radius:3px;
-}
-
-.new-message-box{
-    max-width: 800px;
-    height:auto;
-    border:3px dashed #00B7EF;
-}
-
-.new-message-title{
-    color:#C1BFC0;
-}
-
-.new-message-text{
-    height: 100px;
-    width: 90%;
-}
-
-.new-message-author{
-    /*position bottom right*/
-}
-
-.confirm-new-message-submission-container{
-    position: absolute;
+.plus-button-container {
     border: 1px black dashed;
     max-width: 800px;
 }
 
-.delete-new-message{
+#plus {
+    font-size: 16px;
+    background-color: #66CDAA;
+    color: white;
+    border-radius: 3px;
+    /* vertical-align: middle; */
+    margin-top: 0.5%;
+    width: 7%;
+}
+
+.new-message-box {
+    max-width: 800px;
+    height: auto;
+    border: 3px dashed #00B7EF;
+    margin-top: 5%;
+    display: block;
+}
+
+.new-message-title {
+    color: #C1BFC0;
+    border: 1px #C1BFC0 solid;
+    /* text-align: left; */
+    margin-left: 2%;
+    margin-top: 3%;
+    display: block;
+
+}
+
+.new-message-text {
+    border: 1px #C1BFC0 solid;
+    display: block;
+    color: #C1BFC0;
+    margin-left: 2%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    height: 100px;
+    width: 96%;
+
+}
+
+.new-message-author {
+    display: block;
+    color: black;
+    border: 1px #C1BFC0 solid;
+    margin-bottom:1%;
+}
+
+.confirm-new-message-submission-container {
+
+    border: 1px black dashed;
+    max-width: 800px;
+    margin-top:2%;
+}
+
+.delete-new-message {
+    display: inline-block;
     font-size: 16px;
     color: white;
     background-color: red;
 }
 
-.confirm-new-message{
-    font-size:16px ;
-    background-color:#66CDAA;
-    color:white;
+.confirm-new-message {
+    font-size: 16px;
+    background-color: #66CDAA;
+    color: white;
 }
 
 .clickable {
@@ -105,27 +166,28 @@
     text-align: center;
 }
 
-.relative{
+.relative {
     position: relative;
     top: 0;
-    left: 0;
+    bottom: 0;
 }
 
 .vert-align-center-div {
     position: absolute;
-    top:50%;
+    top: 50%;
     transform: translateY(-50%);
 }
 
 .horiz-align-center-div {
-    position: absolute;
-    left:50%;
-    transform: translateX(-50%);
+    /*position: absolute;*/
+    /*left: 50%;*/
+    /*transform: translateX(-50%);*/
+    margin:auto;
 }
 
 .horiz-and-vert-align-center-div {
     position: absolute;
-    left:50%;
+    left: 50%;
     top: 50%;
     transform: translateX(-50%) translateY(-50%);
 }

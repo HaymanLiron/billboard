@@ -7,10 +7,10 @@ from django.utils import timezone
 
 class IndexView(generic.ListView):
     template_name = 'messageboard/index.html'
-    context_object_name = 'last_messages'
+    context_object_name = 'message_list'
 
     def get_queryset(self):
-        return Message.objects.order_by('-pub_date')[:5]
+        return Message.objects.order_by('-pub_date')[:2]
 
 
 def create_message_database(request):
