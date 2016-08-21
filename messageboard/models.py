@@ -1,5 +1,5 @@
 from django.db import models
-
+from django.contrib.auth import authenticate
 
 class Message(models.Model):
     title = models.CharField(max_length=50)
@@ -9,4 +9,3 @@ class Message(models.Model):
 
     def __str__(self):
         return self.title
-

@@ -52,3 +52,7 @@ function writeDate() {
     var year = d.getFullYear();
     return day + "/" + month + "/" + year;
 }
+
+function checkNewUser(){
+    
+}
