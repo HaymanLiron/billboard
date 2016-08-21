@@ -36,10 +36,10 @@
         <div class="new-message-box row">
             {% csrf_token %}
             <div id="newDate" class="message-date">21/3/2012</div>
-            <input type="text" name="title" class="new-message-title" placeholder="Title">
-            <textarea col="100" row="4" name="text" class="new-message-text" placeholder="Your message here"></textarea>
+            <input type="text" name="title" class="new-message-title" placeholder="Title" required>
+            <textarea col="100" row="4" name="text" class="new-message-text" placeholder="Your message here" required></textarea>
             <div style="text-align: right">
-            <input type="text" name="author" class="new-message-author" placeholder="Author" style="display: inline-block">
+            <input type="text" name="author" class="new-message-author" placeholder="Author" required>
             </div>
 
         </div>

@@ -132,10 +132,11 @@
 }
 
 .new-message-author {
-    display: block;
+    display: inline-block;
     color: black;
     border: 1px #C1BFC0 solid;
     margin-bottom:1%;
+    margin-right: 2%;
 }
 
 .confirm-new-message-submission-container {
@@ -146,6 +147,8 @@
 }
 
 .delete-new-message {
+    height: 30px;
+    width: 70px;
     display: inline-block;
     font-size: 16px;
     color: white;
@@ -153,6 +156,8 @@
 }
 
 .confirm-new-message {
+    height: 30px;
+    width: 70px;
     font-size: 16px;
     background-color: #66CDAA;
     color: white;
@@ -179,9 +184,6 @@
 }
 
 .horiz-align-center-div {
-    /*position: absolute;*/
-    /*left: 50%;*/
-    /*transform: translateX(-50%);*/
     margin:auto;
 }
 
@@ -190,4 +192,8 @@
     left: 50%;
     top: 50%;
     transform: translateX(-50%) translateY(-50%);
+}
+
+.border-red {
+    border: 1px red solid;
 }
