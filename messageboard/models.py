@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth import authenticate
 
+
 class Message(models.Model):
     title = models.CharField(max_length=50)
     text = models.TextField()

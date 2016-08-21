@@ -137,5 +137,4 @@ STATICFILES_DIRS = [
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 LOGIN_REDIRECT_URL = '/messageboard'
-
 LOGIN_URL = 'django.contrib.auth.views.login'
