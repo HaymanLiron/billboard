@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     # http://whitenoise.evans.io/en/stable/django.html#using-whitenoise-in-development
     'whitenoise.runserver_nostatic',
     'django.contrib.staticfiles',
+    'social.apps.django_app.default',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -67,11 +68,23 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'social.apps.django_app.context_processors.backends',
+                'social.apps.django_app.context_processors.login_redirect',
             ],
             'debug': DEBUG,
         },
     },
 ]
+
+AUTHENTICATION_BACKENDS = (
+
+'social.backends.twitter.TwitterOAuth',
+
+'social.backends.linkedin.LinkedinOAuth2',
+
+'django.contrib.auth.backends.ModelBackend',
+
+)
 
 WSGI_APPLICATION = 'billboard.wsgi.application'
 
@@ -138,3 +151,15 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 LOGIN_REDIRECT_URL = '/messageboard'
 LOGIN_URL = 'django.contrib.auth.views.login'
+
+SOCIAL_AUTH_LINKEDIN_OAUTH2_KEY = '81x7o4cs88jo4v'
+
+SOCIAL_AUTH_LINKEDIN_OAUTH2_SECRET = 'eWibQEID9Akko4tB'
+
+SOCIAL_AUTH_LOGIN_REDIRECT_URL = '/home'
+
+SOCIAL_AUTH_LOGIN_URL = '/'
+
+SOCIAL_AUTH_TWITTER_KEY = '3ZQ6nxGf22joXourCc4EWn93E'
+
+SOCIAL_AUTH_TWITTER_SECRET = 'Jkn60O6Du2DfJslUSZs3psg2mubNk8YXGSa6Yo8AHGha1WfSUk'
