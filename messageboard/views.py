@@ -6,6 +6,7 @@ from django.utils import timezone
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.forms import UserCreationForm
 
+
 # @login_required()
 class IndexView(generic.ListView):
     template_name = 'messageboard/index.html'
@@ -50,15 +51,18 @@ def register(request):
     if request.method == 'POST':
         form = UserCreationForm(request.POST)
         if form.is_valid():
+            print("Nathalie")
             new_user = form.save()
             new_user = authenticate(username=form.cleaned_data['username'],
-
-                                password=form.cleaned_data['password1'],
-
-                                )
+                                    password=form.cleaned_data['password1'],)
 
             login(request, new_user)
             return HttpResponseRedirect("/messageboard/")
+        else:
+            form = UserCreationForm()
+            return render(request, "registration/register.html", {
+                'form': form,
+            })
     else:
         form = UserCreationForm()
         return render(request, "registration/register.html", {
