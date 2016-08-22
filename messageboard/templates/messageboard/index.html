@@ -17,8 +17,9 @@
     <br/>
     <div class="user-login-logout-register"><a href="{% url 'django.contrib.auth.views.login' %}">login</a></div>
     <div class="user-login-logout-register"><a href="{% url 'register' %}">Register</a></div>
-    <a href="{% url 'social:begin' backend='linkedin-oauth2' %}" class="button">LinkedIn</a>
-    <a href="{% url 'social:begin' 'twitter' %}?next={{ request.path }}" class="button">Twitter</a>
+    <br>
+    <a href="{% url 'social:begin' backend='linkedin-oauth2' %}" class="button user-login-logout-register social linkedin">LinkedIn</a>
+    <a href="{% url 'social:begin' 'twitter' %}?next={{ request.path }}" class="button user-login-logout-register social twitter">Twitter</a>
     <br/>
 {% else %}
     <br/>
