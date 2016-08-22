@@ -19,10 +19,18 @@
       <imported>true</imported>
       <remarks>$PROJECT_DIR$/billboard/settings.py</remarks>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:C:\dev\web\billboard\db.sqlite3</jdbc-url>
+      <jdbc-url>jdbc:sqlite:C:\Users\itc_user\PycharmProjects\billboardvf\db.sqlite3</jdbc-url>
       <explain-plan-config>
         <provider>com.intellij.database.plan.ExplainPlanProvider.NullExplainPlanProvider</provider>
       </explain-plan-config>
+      <libraries>
+        <library>
+          <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/xerial-sqlite-license.txt</url>
+        </library>
+        <library>
+          <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/sqlite-jdbc-3.8.11.2.jar</url>
+        </library>
+      </libraries>
     </data-source>
     <data-source source="LOCAL" name="Django default2" uuid="16b4790b-d544-4eae-acce-9edc1820795c">
       <driver-ref>sqlite.xerial</driver-ref>
